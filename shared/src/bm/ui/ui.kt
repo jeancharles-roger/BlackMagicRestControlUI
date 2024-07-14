@@ -8,10 +8,12 @@ import androidx.compose.foundation.onClick
 import androidx.compose.material3.Button
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import bm.rest.*
@@ -21,39 +23,6 @@ import kotlinx.coroutines.launch
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
-class AppContext {
-
-    var rest: RestConfig by mutableStateOf(RestConfig("http://microg2.local/"))
-    
-    var status: CameraStatus? by mutableStateOf(null)
-
-    private val targetStatus: MutableState<CameraStatus?> = mutableStateOf(null)
-    var target: CameraStatus?
-        get() = targetStatus.value
-        set(value) {
-            targetStatus.value = value
-        }
-
-    private val statusUpdater = LazyTimer(
-        scope = CoroutineScope(context = Dispatchers.IO),
-        wait = 500.toDuration(DurationUnit.MILLISECONDS),
-        block = {
-            try {
-                status = rest.status()
-                target = status
-            } catch (t: Throwable) {
-                // TODO show error somewhere
-                status = null
-                target = null
-            }
-        }
-    )
-
-    fun updateStatus() {
-        statusUpdater.start()
-    }
-
-}
 
 @Composable
 fun MainView(app: AppContext) {
@@ -64,7 +33,10 @@ fun MainView(app: AppContext) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text("Camera")
-            Text(app.rest.base)
+            TextField(
+                value = app.rest.base,
+                onValueChange = { app.rest = RestConfig(it) }
+            )
             Button(onClick = { app.updateStatus() }) {
                 Text("Refresh")
             }
@@ -104,7 +76,16 @@ fun MainView(app: AppContext) {
                 IsoSelection(app, scope, target)
             }
         } else {
-            Text("Not connected")
+            val error = app.error
+            if (error != null) {
+                Text(
+                    text = "${error::class.simpleName}: ${error.message}",
+                    color = Color.Red,
+                    fontWeight = FontWeight.Bold
+                )
+            } else {
+                Text("Not connected")
+            }
         }
     }
 }
@@ -225,6 +206,7 @@ private fun RowScope.IrisSlider(
         Slider(
             value = focal.toFloat(),
             onValueChange = {
+                // TODO iris control
                 /*
                 scope.launch {
                     val value = WhiteBalanceTint(it.toInt())
@@ -271,7 +253,7 @@ private fun RowScope.ShutterSlider(
                 }
             },
             valueRange = 1f..360f,
-            
+
             steps = 360 - 1
         )
     }

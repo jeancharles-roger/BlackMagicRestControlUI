@@ -1,9 +1,6 @@
 package bm.ui
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import kotlin.time.Duration
 
 /**
@@ -11,18 +8,20 @@ import kotlin.time.Duration
  * If it's started again before the delay, the current block is cancelled and
  * a new one starts again from zero.
  */
-class LazyTimer(
+class LazyTimer<T>(
     val scope: CoroutineScope,
-    /** Waits duration before launching the block*/
+    /** Waits duration before launching the block */
     val wait: Duration,
+    /** Ran each time a timer is done */
+    val onDone: (T) -> Unit = {},
     /** block to execute after time */
-    val block: suspend () -> Unit
+    val block: suspend () -> T
 ) {
 
-    private class Timer(
+    private class Timer<T>(
         val scope: CoroutineScope,
         val wait: Duration,
-        val block: suspend () -> Unit
+        val block: suspend () -> T
     ) {
         var job: Job? = null
         var cancelled = false
@@ -31,21 +30,26 @@ class LazyTimer(
             cancelled = true
         }
 
-        fun start() {
+        fun start(parent: LazyTimer<T>) {
             job = scope.launch {
                 delay(wait)
-                if (!cancelled) block()
+                if (!cancelled) {
+                    val result = block()
+                    parent.onDone(result)
+                }
             }
         }
     }
 
-    private var current: Timer? = null
+    private var current: Timer<T>? = null
 
     fun start() {
         current?.cancel()
         current = Timer(scope, wait, block)
-        current?.start()
+        current?.start(this)
     }
+
+    fun running() = current != null
 
     suspend fun join() {
         current?.job?.join()
