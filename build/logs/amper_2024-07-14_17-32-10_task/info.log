@@ -1,7 +1,0 @@
-JetBrains Amper version 0.3.1+b6fbf1d
-running on Mac OS X 14.5 jvm arch aarch64
-
-00:01.611 INFO  :jvm-app:resolveDependenciesJvm ExecuteOnChangedInputs    ':jvm-app:resolveDependenciesJvm' is up-to-date
-00:01.611 INFO  :shared:resolveDependenciesJvm ExecuteOnChangedInputs    ':shared:resolveDependenciesJvm' is up-to-date
-00:01.659 INFO  :shared:compileJvm        ExecuteOnChangedInputs    ':shared:compileJvm' is up-to-date
-00:01.669 INFO  :jvm-app:compileJvm       ExecuteOnChangedInputs    ':jvm-app:compileJvm' is up-to-date
