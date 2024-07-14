@@ -1,0 +1,64 @@
+JetBrains Amper version 0.3.1+b6fbf1d
+running on Mac OS X 14.5 jvm arch aarch64
+
+00:01.480 INFO  :shared:resolveDependenciesJvm ExecuteOnChangedInputs    building ':shared:resolveDependenciesJvm'
+00:01.483 INFO  :jvm-app:resolveDependenciesJvm ExecuteOnChangedInputs    ':jvm-app:resolveDependenciesJvm' is up-to-date
+00:14.052 ERROR :shared:resolveDependenciesJvm MavenResolver             Hashes don't match for sha512 (expected: fa0105db6d36cf3769003e9d4617ca22c029912f993e4c31b71e9d17e02375a505d2696c6014f6f2f9b0a4e19d76485217cf6edca8149675f391e7e552f8dc96, actual: 37ba0c0b39cbdd6e8c1dd3ce3ec5f9d7db1ed2315f98ca0be7d7b0e852f54de125ac5b802b4b793d1854e4b8a92a6385db6b13b2c752ea1da07c0f407ff841bf)
+00:14.052 ERROR :shared:resolveDependenciesJvm MavenResolver             Pom provided but metadata required for org.jetbrains.compose.animation:animation:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+00:14.052 ERROR :shared:resolveDependenciesJvm MavenResolver             Hashes don't match for sha512 (expected: 9b5db82876db5c99375fe9d2eb64a4744271e2a9f87388f006b09932fff66761f5831fc449f0b1277846e1f206a3fb346cad105bc83b708fddff2bff6186cb6e, actual: 83f8a3911cedfa09c412ff73b272055588c99e8867a9f17b43de7239887f48f1ecae3958719fad1782f5e0e4a02d5b3779180ed5ee21b982f997dc8ce8aa3d5e)
+00:14.052 ERROR :shared:resolveDependenciesJvm MavenResolver             Pom provided but metadata required for org.jetbrains.compose.ui:ui:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+00:14.056 ERROR :shared:resolveDependenciesJvm ResolveExternalDependenciesTask resolve dependencies of module 'shared' failed
+fragments: jvm
+repositories:
+  https://repo1.maven.org/maven2
+  https://maven.google.com
+  https://maven.pkg.jetbrains.space/public/p/compose/dev
+  https://packages.jetbrains.team/maven/p/kpm/public/
+direct dependencies:
+  io.ktor:ktor-client-cio:2.3.11
+  io.ktor:ktor-client-content-negotiation:2.3.11
+  io.ktor:ktor-client-core:2.3.11
+  io.ktor:ktor-serialization-kotlinx-json:2.3.11
+  org.jetbrains.compose.foundation:foundation:1.6.10
+  org.jetbrains.jewel:jewel-int-ui-standalone:0.15.2
+  org.jetbrains.kotlin:kotlin-stdlib:2.0.0
+  org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1
+exported dependencies:
+  
+platform: JVM: org.jetbrains.amper.cli.UserReadableError: Unable to resolve dependencies for module shared:
+
+Hashes don't match for sha512 (expected: fa0105db6d36cf3769003e9d4617ca22c029912f993e4c31b71e9d17e02375a505d2696c6014f6f2f9b0a4e19d76485217cf6edca8149675f391e7e552f8dc96, actual: 37ba0c0b39cbdd6e8c1dd3ce3ec5f9d7db1ed2315f98ca0be7d7b0e852f54de125ac5b802b4b793d1854e4b8a92a6385db6b13b2c752ea1da07c0f407ff841bf)
+Pom provided but metadata required for org.jetbrains.compose.animation:animation:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+Hashes don't match for sha512 (expected: 9b5db82876db5c99375fe9d2eb64a4744271e2a9f87388f006b09932fff66761f5831fc449f0b1277846e1f206a3fb346cad105bc83b708fddff2bff6186cb6e, actual: 83f8a3911cedfa09c412ff73b272055588c99e8867a9f17b43de7239887f48f1ecae3958719fad1782f5e0e4a02d5b3779180ed5ee21b982f997dc8ce8aa3d5e)
+Pom provided but metadata required for org.jetbrains.compose.ui:ui:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+	at org.jetbrains.amper.cli.UserReadableErrorKt.userReadableError(UserReadableError.kt:12)
+	at org.jetbrains.amper.resolver.MavenResolver.resolve(MavenResolver.kt:122)
+	at org.jetbrains.amper.resolver.MavenResolver$resolve$1.invokeSuspend(MavenResolver.kt)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at org.jetbrains.amper.util.ExecuteOnChangedInputs$execute$$inlined$useWithScope$1.invokeSuspend(ExecuteOnChangedInputs.kt:79)
+	at org.jetbrains.amper.tasks.ResolveExternalDependenciesTask$run$$inlined$useWithScope$1.invokeSuspend(ResolveExternalDependenciesTask.kt:89)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2$runTask$3$1.invokeSuspend(TaskExecutor.kt:92)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2.invokeSuspend$runTask(TaskExecutor.kt:91)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2$2$1$invokeSuspend$$inlined$useWithScope$1.invokeSuspend(TaskExecutor.kt:72)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2$2$1.invokeSuspend(TaskExecutor.kt:162)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2$2.invokeSuspend(TaskExecutor.kt:122)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2.invokeSuspend(TaskExecutor.kt:98)
+	at org.jetbrains.amper.engine.TaskExecutor.runTask-yxL6bBk(TaskExecutor.kt:69)
+	at org.jetbrains.amper.engine.TaskExecutor$runTask$2$2$results$1$1$newDeferred$1.invokeSuspend(TaskExecutor.kt:107)
+Caused by: org.jetbrains.amper.cli.UserReadableError: Unable to resolve dependencies for module shared:
+
+Hashes don't match for sha512 (expected: fa0105db6d36cf3769003e9d4617ca22c029912f993e4c31b71e9d17e02375a505d2696c6014f6f2f9b0a4e19d76485217cf6edca8149675f391e7e552f8dc96, actual: 37ba0c0b39cbdd6e8c1dd3ce3ec5f9d7db1ed2315f98ca0be7d7b0e852f54de125ac5b802b4b793d1854e4b8a92a6385db6b13b2c752ea1da07c0f407ff841bf)
+Pom provided but metadata required for org.jetbrains.compose.animation:animation:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+Hashes don't match for sha512 (expected: 9b5db82876db5c99375fe9d2eb64a4744271e2a9f87388f006b09932fff66761f5831fc449f0b1277846e1f206a3fb346cad105bc83b708fddff2bff6186cb6e, actual: 83f8a3911cedfa09c412ff73b272055588c99e8867a9f17b43de7239887f48f1ecae3958719fad1782f5e0e4a02d5b3779180ed5ee21b982f997dc8ce8aa3d5e)
+Pom provided but metadata required for org.jetbrains.compose.ui:ui:1.6.10-dev1549 ([https://repo1.maven.org/maven2, https://maven.google.com, https://maven.pkg.jetbrains.space/public/p/compose/dev, https://packages.jetbrains.team/maven/p/kpm/public/])
+	at org.jetbrains.amper.cli.UserReadableErrorKt.userReadableError(UserReadableError.kt:12)
+	at org.jetbrains.amper.resolver.MavenResolver.resolve(MavenResolver.kt:122)
+	at org.jetbrains.amper.resolver.MavenResolver$resolve$1.invokeSuspend(MavenResolver.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:111)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:585)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:802)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:706)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:693)

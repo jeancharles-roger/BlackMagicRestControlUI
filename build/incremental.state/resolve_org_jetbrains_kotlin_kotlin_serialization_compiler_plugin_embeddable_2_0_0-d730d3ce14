@@ -1,0 +1,17 @@
+{
+    "amperBuild": "0.3.1",
+    "configuration": {
+    },
+    "inputs": [
+    ],
+    "inputsState": {
+    },
+    "outputs": [
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-serialization-compiler-plugin-embeddable/2.0.0/kotlin-serialization-compiler-plugin-embeddable-2.0.0.jar"
+    ],
+    "outputsState": {
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-serialization-compiler-plugin-embeddable/2.0.0/kotlin-serialization-compiler-plugin-embeddable-2.0.0.jar": "size 704461 mtime 2024-07-11T08:43:24.760441894Z mode 420 owner charlie group staff"
+    },
+    "outputProperties": {
+    }
+}

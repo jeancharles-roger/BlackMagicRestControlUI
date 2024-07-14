@@ -1,0 +1,55 @@
+{
+    "amperBuild": "0.3.1",
+    "configuration": {
+    },
+    "inputs": [
+    ],
+    "inputsState": {
+    },
+    "outputs": [
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-impl/2.0.0/kotlin-build-tools-impl-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.0.0/kotlin-build-tools-api-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.0.0/kotlin-compiler-embeddable-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-runner/2.0.0/kotlin-compiler-runner-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.0.0/kotlin-scripting-compiler-embeddable-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.0.0/kotlin-scripting-compiler-impl-embeddable-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/annotations/13.0/annotations-13.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-script-runtime/2.0.0/kotlin-script-runtime-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.0.0/kotlin-daemon-embeddable-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-common/2.0.0/kotlin-build-common-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-client/2.0.0/kotlin-daemon-client-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.5.0/kotlinx-coroutines-core-jvm-1.5.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-common/2.0.0/kotlin-scripting-common-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-jvm/2.0.0/kotlin-scripting-jvm-2.0.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.0/kotlin-stdlib-jdk8-1.5.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.0/kotlin-stdlib-common-1.5.0.jar",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.0/kotlin-stdlib-jdk7-1.5.0.jar"
+    ],
+    "outputsState": {
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/annotations/13.0/annotations-13.0.jar": "size 17536 mtime 2024-07-11T08:43:15.774094525Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar": "size 572985 mtime 2024-07-11T08:43:15.988823432Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-common/2.0.0/kotlin-build-common-2.0.0.jar": "size 527106 mtime 2024-07-11T08:43:15.971251968Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.0.0/kotlin-build-tools-api-2.0.0.jar": "size 26713 mtime 2024-07-11T08:43:15.778481016Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-impl/2.0.0/kotlin-build-tools-impl-2.0.0.jar": "size 54305 mtime 2024-07-11T08:43:15.798985739Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.0.0/kotlin-compiler-embeddable-2.0.0.jar": "size 57192195 mtime 2024-07-11T08:43:23.391264793Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-runner/2.0.0/kotlin-compiler-runner-2.0.0.jar": "size 19816 mtime 2024-07-11T08:43:15.765863411Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-client/2.0.0/kotlin-daemon-client-2.0.0.jar": "size 560799 mtime 2024-07-11T08:43:15.973891021Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.0.0/kotlin-daemon-embeddable-2.0.0.jar": "size 346229 mtime 2024-07-11T08:43:15.875878855Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar": "size 3038560 mtime 2024-07-11T08:43:16.408053782Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-script-runtime/2.0.0/kotlin-script-runtime-2.0.0.jar": "size 43404 mtime 2024-07-11T08:43:16.5508226Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-common/2.0.0/kotlin-scripting-common-2.0.0.jar": "size 196218 mtime 2024-07-11T08:43:16.481434647Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.0.0/kotlin-scripting-compiler-embeddable-2.0.0.jar": "size 392368 mtime 2024-07-11T08:43:15.908353315Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.0.0/kotlin-scripting-compiler-impl-embeddable-2.0.0.jar": "size 229492 mtime 2024-07-11T08:43:15.837648045Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-scripting-jvm/2.0.0/kotlin-scripting-jvm-2.0.0.jar": "size 150192 mtime 2024-07-11T08:43:15.835906648Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.0/kotlin-stdlib-common-1.5.0.jar": "size 197353 mtime 2024-07-11T08:43:15.833993087Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.0/kotlin-stdlib-jdk7-1.5.0.jar": "size 22992 mtime 2024-07-11T08:43:15.779660669Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.0/kotlin-stdlib-jdk8-1.5.0.jar": "size 16124 mtime 2024-07-11T08:43:17.096166501Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar": "size 1729731 mtime 2024-07-11T08:43:00.060190582Z mode 420 owner charlie group staff",
+        "/Users/charlie/Library/Caches/Amper/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.5.0/kotlinx-coroutines-core-jvm-1.5.0.jar": "size 1482528 mtime 2024-07-11T08:43:16.119237767Z mode 420 owner charlie group staff"
+    },
+    "outputProperties": {
+    }
+}

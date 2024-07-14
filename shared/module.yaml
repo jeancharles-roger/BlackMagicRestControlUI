@@ -1,0 +1,25 @@
+product:
+  type: lib
+  platforms: [jvm]
+
+#repositories:
+#  - https://packages.jetbrains.team/maven/p/kpm/public/
+
+dependencies:
+  - io.ktor:ktor-client-core:2.3.11
+  - io.ktor:ktor-client-cio:2.3.11
+  - io.ktor:ktor-client-content-negotiation:2.3.11
+  - io.ktor:ktor-serialization-kotlinx-json:2.3.11
+  - $compose.foundation
+  - $compose.material3
+
+test-dependencies:
+  - $kotlin-test
+  - org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0
+  
+settings: 
+  kotlin:
+    serialization: json
+  
+  compose:
+      enabled: true
