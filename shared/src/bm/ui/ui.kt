@@ -1,10 +1,9 @@
 package bm.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.onClick
 import androidx.compose.material3.Button
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
@@ -167,7 +166,7 @@ private fun RowScope.FrameRateSlider(
         Text("Frame Rate")
         val frameRate = target.format.frameRate
         val index = frameRate.index
-        val localFrameRates = target.supported.supportedFormats.first().frameRates
+        val localFrameRates = target.supported.supportedFormats.firstOrNull()?.frameRates ?: listOf("24")
         Text(frameRate)
         Slider(
             value = index.toFloat(),
@@ -291,7 +290,7 @@ private fun RowScope.IsoSelection(
                             color = if (selected) Color.Blue else Color.Black
                         )
                         .padding(10.dp)
-                        .onClick {
+                        .clickable {
                             scope.launch {
                                 val value = target.iso.copy(iso = current)
                                 app.rest.putIso(value)

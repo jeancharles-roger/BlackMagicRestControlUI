@@ -1,9 +1,6 @@
 product:
   type: lib
-  platforms: [jvm]
-
-#repositories:
-#  - https://packages.jetbrains.team/maven/p/kpm/public/
+  platforms: [jvm, android, macosArm64]
 
 dependencies:
   - io.ktor:ktor-client-core:2.3.11
@@ -12,6 +9,15 @@ dependencies:
   - io.ktor:ktor-serialization-kotlinx-json:2.3.11
   - $compose.foundation
   - $compose.material3
+
+dependencies@android:
+  # Compose integration with Android activities
+  - androidx.activity:activity-compose:1.7.2: exported
+  - androidx.appcompat:appcompat:1.6.1: exported
+  # [AMPER-529] Workaround: androidx.activity:activity-compose:1.7.2 depends on androidx.compose.ui:ui-unit-android:1.6.4
+  # that in turn depends on androidx.collection:collection-ktx:1.2.0 which is outdated
+  # and incompatible with another dependency androidx.collection:collection-jvm:1.4.0
+  - androidx.collection:collection-ktx:1.4.0: exported
 
 test-dependencies:
   - $kotlin-test
