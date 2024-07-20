@@ -1,0 +1,13 @@
+product:
+  type: android/app
+  platforms: [android]
+
+dependencies:
+  - ../shared
+  - $compose.foundation
+  - $compose.material3
+
+settings: 
+  compose:
+    enabled: true
+  
