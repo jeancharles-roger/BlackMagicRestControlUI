@@ -1,0 +1,12 @@
+product:
+  type: jvm/app
+  platforms: [jvm]
+
+dependencies:
+  - ../shared
+  - io.ktor:ktor:2.3.11
+  - io.ktor:ktor-server:2.3.11
+  - io.ktor:ktor-server-cio:2.3.11
+  - io.ktor:ktor-server-content-negotiation:2.3.11
+  - io.ktor:ktor-serialization-kotlinx-json:2.3.11
+
